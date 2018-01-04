@@ -1,0 +1,116 @@
+    .app-register {
+        background: #fff;
+        .topTitle {
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: 0.45rem;
+            background: #b81c22;
+            text-align: center;
+            line-height: 0.45rem;
+            color: #fff;
+            .topBack {
+                position: absolute;
+                left: 0.11rem;
+                top: -0.02rem;
+                font-size: 0.29rem;
+            }
+            .TitleName {
+                font-size: 0.17rem;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            .input_content2 {
+                padding:0.281rem 0.225rem 0rem 0.225rem;
+                >a {
+                    display: block;
+                    background: #B81B22;
+                    color: #FFF;
+                    border-radius: 0.02rem;
+                    padding: 0.09rem 0rem;
+                    font-size: 0.2rem;
+                    text-align: center;
+                    margin-top: 0.3rem;
+                }  
+                .input_2 {
+                    margin-top: 0.1rem;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    .yanzheng {
+                        width: 1.89rem;
+                        height: 38px;
+                    }
+                    >img {
+                        width: 0.675rem;
+                        height: 36px;
+                    }
+                }
+                .mphone {
+                    line-height: 39px;
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items(center) #phone {
+                        width: 1.89rem;
+                        height: 37.6px;
+                        padding: 0.108rem 0.108rem;
+                    }
+                    .authcode {
+                        text-align: center;
+                        display: inline-block;
+                        width:1.03rem;
+                        height:44px;
+                        line-height: 44px;
+                        color: #b71c22;
+                        border: 1.6px solid #b2b2b2;
+                        border-radius: 4px;
+                    }
+                }
+                .passwd{
+                    .password {
+                        height: 37.6px;
+                        padding: 0.108rem 0.108rem;
+                    }
+                    .mint-switch-input{
+                        display: none;
+                        
+                    }
+                    .mint-switch-core{
+                                border-color: #bf4242;
+                                background-color: #bf4242;
+                        }
+                    .btn{
+                        position: absolute;
+                        top:254px;
+                        left:333px;
+                        
+                    }
+                }
+                .rule{
+                    color: #b3b3b3;
+                    text-align: center;
+                    margin-top: 0.337rem;
+                    margin-bottom:0.168rem;
+                    .tit_two{
+                        color: #4c4c4c;
+                    }
+                }
+                input {
+                    border: 0;
+                    font-size: 0.15rem;
+                    display: inline-block;
+                    background: #f5f5f5;
+                    color: #b3b3b3;
+                    padding: 0.108rem;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                div {
+                    padding-bottom: 1em;
+                }
+            }
+        }
+    }
