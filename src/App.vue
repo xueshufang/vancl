@@ -1,23 +1,34 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+	<div id="app">
+		<router-view/>
+
+	</div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+	import AppLogin from './components/login/AppLogin'
+	import AppRegister from './components/register/AppRegister'
+	import bus from './modules/bus.js'
+	export default {
+		name: 'app',
+		data:function(){
+			return {
+				type: 'login'
+			}
+		},
+		components: {
+			AppLogin,
+			AppRegister
+		},
+		mounted() {
+			let that = this
+			bus.$on("change-type", (type) => {
+				that.type = type
+			})
+		}
+	}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
