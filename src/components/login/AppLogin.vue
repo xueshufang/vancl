@@ -34,10 +34,10 @@
 					<div class="input_2">
 						<input type="password" name="password" id="password" placeholder="请输入密码" />	
 					</div>	
-					<div class="input_3">
+					<!--<div class="input_3">
 						<input type="text" placeholder="请输入图片验证码"  class="yanzheng"/>
 						<img src="../../assets/images/验证码.jpg"/>	
-					</div>
+					</div>-->
 					<a href="javascript:;">登&nbsp录</a>
 				</div>
 			</form>

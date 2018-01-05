@@ -1,9 +1,13 @@
-<template>
-      <section class="app-main">
+<template >
+	
+      <div class="app-main">
+		   <router-view></router-view>
+		    <AppHeader></AppHeader>
 			<div class="main_inner ">
 				<AppBanner></AppBanner>
 				<!--活动-->
-				<div class="t1003 clearfix">
+				<div class="main-p">
+					<div class="t1003 clearfix">
 					<div class="t1001">
 						<a href="">
 							<img src="http://i8.m.vancl.com/wap/2017_11_21_12_36_52_8847_320x50.jpg" alt="" />
@@ -132,12 +136,12 @@
 						<!--登录注册  -->
 						<div class="login">
 							<div class="login-btn">
-								 <a href="">登录</a>
-								 <a href="">注册</a>
+								<router-link :to="{name:'login'}">登录</router-link>
+								<router-link :to="{name:'register'}">注册</router-link>
 							</div>
 						</div>
 						<!--main-footer  -->
-						<div class="main-footer">
+						<div class="main-footerp">
 							<ul>
                                <li>
 								   <a href="">
@@ -166,13 +170,19 @@
 						</div>
                        
 				</div>
+				</div>
 			</div>
-		</section>
+			 <AppNav></AppNav> 
+			 
+		</div>
+			
 </template>
 
 <script>
 
+	 import AppHeader from './AppHeader'
 	import AppBanner from './Index-main/AppBanner.vue'
+	 import AppNav from './AppNav'
     export default {
 		 name:'app-main',
 		  data(){
@@ -181,7 +191,7 @@
 			 }
 		  },
 		 components:{
-			 AppBanner
+			 AppBanner,AppHeader,AppNav
 		 },
          methods:{
 			
@@ -202,52 +212,7 @@
     }
 </script>
 
-<style>
-.app-main{display: flex;flex: 1;}
- .main_inner{position:relative;}
-.t1003{margin-top:4px;display: flex;justify-content: space-between;align-items: center;}
-.t1001{width:50%;overflow: hidden;margin:0 1px 0 1px;display: inline-block;overflow: hidden;line-height:0;}
-.t1001 a{display: inline-block;width:100%;display: inline-block;height:2.45rem;}
-.t1001 a img{display: inline-block;width:100%;}
-/*秒杀*/
-.detail-text{margin:0.16rem 0;position:relative;background: #fff url('http://i10.m.vancl.com/Content/H5/img/sec-kill-bkgImg.png') top center;};background-size:cover;width:100%;
-.detail-text>a{display: block;color:#000;}
-.seckill-text,.seckill-countdown{padding:0.4rem 0;text-align: center;}
-.seckill-text .clock-icon{display: inline-block;width:1.2rem;height:1.2rem;vertical-align: text-bottom;background:url('http://i10.m.vancl.com/Content/H5/img/clock.png') no-repeat top center;background-size: 1.2rem;;}
-.font-wbold{font-size:1.2rem;font-weight: 600;color: #b81c22;}
-.enter-sekill{position:absolute;bottom: 0.5rem;right:0.5rem;display: table;}
+<style lang="scss" scoped>
 
-.right-arIcon{display: table-cell;width:1.2rem;height:1.2rem;background: url('http://i10.m.vancl.com/Content/H5/img/right-arrow.png') no-repeat center top;background-size:1.2rem;}
-/*mainlist  */
-.mainlist{width:100%;overflow: hidden;position:absolute;}
-.t10 a{width: 100%;display: block;height:3.5rem;}
-.t10 a img{display: block;width:100%;height:100%;}
-.t1002{width:50%;height:23.42rem;}
-.t1000{width:100%;overflow: hidden;margin-top:2px;display: flex;justify-content: space-between;flex-wrap:wrap; }
-.t1002>a{display: block;}
-.t1002>a>img{display: inline-block;width:100%;height:100%;}
-
-.allAndtop{
-	display: flex;justify-content: space-between;align-items: center;margin-bottom:3.2rem;
-	
-}
-.allAndtop>a{display: inline-block;width:50%;height:3.67rem;}
-.allAndtop>a>img{display: inline-block;width:100%;height:100%;}
-.login{text-align: center;padding:3.5rem 0;}
-.login-btn{display: inline-block;}
-.login-btn a{background:#fff;padding:.5rem 2.5rem;}
-.login-btn a:first-child{margin-right: 6px;}
-.main-footer{margin-bottom:5rem;text-align: center;display: flex;flex-direction: column;align-items: center;}
-.main-footer ul{display: flex;justify-content: space-around;align-items: center;
-    border-bottom: 1px solid #4c4d4d;
-    border-top: 1px solid #4d4d4d;
-    padding: 1.2em 0;flex-direction: row;width:22.4rem;}
-.main-footer ul li a{display: inline-block;width:3.5rem;height:5.1rem;}
-.main-footer ul li a img{width:100%;height:100%;display: inline-block;}
-.copyright {
-	display: block;
-    font-size: .9em;
-    line-height: 2rem;
-    color: #4c4c4c;}
-
+ 
 </style>
