@@ -1,5 +1,26 @@
 .app-main{width:100%;}
+
+.openVanclAppDiv{width:100%;display: flex;height:0.468rem;
+        background-color: rgba(35,35,35,0.8);align-items:center;justify-content:space-around;
+      #closeVanclApp{
+          height:0.168rem;width:0.168rem;background:url('https://m.vancl.com/Content/H5/img/white-close-icon.png') no-repeat top center;
+          background-size: contain;
+      }
+        img{
+            width:0.3239rem;height:0.3239rem;display: inline-block;
+         
+        }
+          span{
+              display:inline-block;color: #fff;width:45%;font-size: 11.25px;
+          }
+        #openVanclApp{
+            width:1.02rem;height:0.31rem;background:#b81c22;text-align: center;
+           color:#fff;line-height:0.31rem;font-size: 11.25px;
+        }
+}
 .header_inner{width:100%;height:0.48rem;position: relative;background:#b81c22;z-index: 999;}
+.isFixed{position:fixed;top:0;width:100%;height:0.48rem;background:#b81c22;z-index: 999;}
+
 .search-form{position:absolute;height:0.2639rem;line-height: 2.2rem;background:#fff;
     width:85%;top:0.09rem;
     left:0.09rem;border-radius: 0.03rem;}

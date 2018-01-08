@@ -17,11 +17,8 @@
     </div>
 </template>
 <script>
-    import Vue from "vue"
+  
     import axios from 'axios'
-    Vue.component(Swipe.name, Swipe);
-    Vue.component(SwipeItem.name, SwipeItem);
-
     import { Swipe, SwipeItem } from 'mint-ui';
     // import Swiper from 'swiper'
     export default{
@@ -36,7 +33,7 @@
               axios.get('http://localhost:8080/mz/v4/api/billboard/home?',{
                   params:{__t:Date.now()}
               }).then((res)=>{
-                  console.log(res)
+                
                  this.billboards=res.data.data.billboards
               })
           }
