@@ -1,13 +1,6 @@
 <template>
 	<div class="app-login">
-		<!--头部-->
-		<div class="topTitle">
-			<span class="topBack">
-				<i class="yo-ico">&#xe603;</i>
-			</span>
-			<span class="TitleName">登录</span>
-		</div>
-		
+		<AppComHeader/>
 			
 			
 		<!--内容部分-->
@@ -34,10 +27,6 @@
 					<div class="input_2">
 						<input type="password" name="password" id="password" placeholder="请输入密码" />	
 					</div>	
-					<!--<div class="input_3">
-						<input type="text" placeholder="请输入图片验证码"  class="yanzheng"/>
-						<img src="../../assets/images/验证码.jpg"/>	
-					</div>-->
 					<a href="javascript:;">登&nbsp录</a>
 				</div>
 			</form>
@@ -100,23 +89,25 @@
 
 </template>
 
-<script>
-	import bus from "../../modules/bus.js"
-	export default {
-		name:"app-login",
-		data(){
-			return {
-				type:'login'
-			}
-		},
-		watch:{
-        	type(){
-        		bus.$emit('change-type',this.type)
-        	}
-        }
-		
+<script>import AppComHeader from '../header/AppComHeader'
+import bus from "../../modules/bus.js"
+export default {
+	name: "app-login",
+	data() {
+		return {
+			type: 'login'
+		}
+	},
+	watch: {
+		type() {
+			bus.$emit('change-type', this.type)
+		}
+	},
+	components: {
+		AppComHeader
 	}
-</script>
+
+}</script>
 
 <style lang="scss" scoped="">
 	

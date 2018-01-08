@@ -1,57 +1,48 @@
 <template>
 	<div class="app-good-car-item">
-		<div class="sp_produce-x">
-			<!--在售商品-->
-			<div class="sale-x">
-				<span>在售商品 :</span>
-				<input type="text" name="rm-x" class="rm-x" value="删除" />
-				<input type="text" name="no_check-x" class="no_check-x" value="全不选" />
-			</div>
-			
-				
-			<!--商品信息-->
-			<div class="shoppingcar-x">
-				
+		<!--商品信息-->
+
+		<div class="shopping-pdc-x">
+			<!--全选框-->
+			<input type="checkbox" name="all_ck-x" id="all_ck-x" />
+			<!--商品图-->
+			<a href="#" class="pdc_img-x">
+				<img src="../../assets/images/shoppingimg.jpg" alt="goodcar" />
+			</a>
+			<!--信息-->
+			<div class="shopping_settle-x">
+				<a href="#" class="shop_tit-x">
+					凡客休闲鞋 一脚蹬 女款
+				</a>
+				<p class="shop_cont-x">
+					<span class="prduce_color-x">颜色： 天蓝色&nbsp;&nbsp;&nbsp;尺码： 34</span>
+					<span class="produce_clear-x">
+						
+					</span>
+				</p>
+
+				<p class="shop_cont_two-x">
+					<span class="prduce_money-x">￥{{info.price}}.00</span>
+					<span class="produce_reduce-x"></span>
+					<span class="produce_num-x">
+						<input type="text" name="num-x" id="num-x" value="1" />
+					</span>
+					<span class="produce_add-x"></span>
+				</p>
 			</div>
 		</div>
+
 	</div>
 </template>
 
 <script>
-	export default{
-		name:"app-good-car-item"
+
+	export default {
+		name: "app-good-car-item",
+		props:['info'],   //通过props接收父组件car传来的数据
+
 	}
 </script>
 
-<style scope lang="scss">
-.app-good-car-item{
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	/*line-height:1.057rem;*/
-	margin-bottom: 42.5px;
-	.sp_produce-x{
-		background: #fff;
-		padding: 0em 2em;
-		color: #4c4c4c;
-		.sale-x{
-			margin-top:0.03rem;
-			font-size:0.1rem;
-			.rm-x,.no_check-x{
-				height:14.4px;
-				font-size:0.1rem;
-				float: right;
-				width:0.3rem;
-				padding: 0.02rem 0;
-				text-align: center;
-				background-color: #b81c22;
-				color: #fff;
-				margin-left:0.1rem;
-				cursor: pointer;
-				border-radius: 0.02rem;
-				border: 0 none;
-			}
-		}
-	}
-}
+<style>
 </style>

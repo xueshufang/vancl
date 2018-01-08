@@ -1,25 +1,8 @@
-.app-good-car {
-    .topTitle {
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 0.45rem;
-        background: #b81c22;
-        text-align: center;
-        line-height: 0.45rem;
-        color: #fff;
-        .topBack {
-            position: absolute;
-            left: 0.11rem;
-            top: -0.02rem;
-            font-size: 0.29rem;
-        }
-        .TitleName {
-            font-size: 0.17rem;
-        }
-    }
+.app-good-car-footer {
+    height:49px;
     .footer-x {
         padding: 0.047rem  0;
+        height:49px;
         width: 100%;
         position: fixed;
         bottom: 0;

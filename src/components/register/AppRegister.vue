@@ -1,12 +1,7 @@
 <template>
 	<div class="app-register">
 		<!--头部-->
-		<div class="topTitle">
-			<span class="topBack">
-				<i class="yo-ico">&#xe603;</i>
-			</span>
-			<span class="TitleName">注册</span>
-		</div>
+		<AppComHeader/>
 		
 			
 			
@@ -59,11 +54,15 @@
 </template>
 
 <script>
+	import AppComHeader from '../header/AppComHeader'
 	import Vue from 'vue'
 	import {Switch} from 'mint-ui'
 	Vue.component(Switch.name, Switch);
 	export default {
 		name:"app-register",
+		components:{
+			 AppComHeader
+		}
 	}
 </script>
 

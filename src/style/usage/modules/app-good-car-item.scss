@@ -1,0 +1,129 @@
+.app-good-car-item {
+        padding: 0.1rem 0.2rem;
+        font-size: 0.1rem;
+        .shopping-pdc-x {
+            display: flex;
+            padding: 0.1em 0em;
+            border-bottom: 0.8px solid #e3e3e3;
+            position: relative;
+            #all_ck-x {
+                position: absolute;
+                top: 45%;
+                vertical-align: middle;
+                z-index: 5;
+                width: 0.2rem;
+                height: 0.2rem;
+                left: -0.14rem;
+                outline: 0;
+            }
+            .pdc_img-x {
+                display: inline-block;
+                width: 0.7rem;
+                height: 0.7rem;
+                margin-left: 0.1rem;
+                >img {
+                    width: 100%;
+                }
+            }
+            .shopping_settle-x {
+                .shop_tit-x {
+                    color: #4c4c4c;
+                    font-size: 0.1rem;
+                    display: block;
+                    line-height: 18px;
+                }
+                .shop_cont-x {
+                    margin-top: 0.05rem;
+                    .prduce_color-x {
+                        display: block;
+                        height: 15px;
+                        line-height: 15px;
+                    }
+                    .produce_clear-x {
+                        width: 1.8em;
+                        height: 1.8em;
+                        background: url(../../assets/images/car.png) no-repeat center;
+                        background-size: auto auto;
+                        background-size: 1.6em 1.6em;
+                        display: inline-block;
+                        position: absolute;
+                        top: 0.2rem;
+                        right: 0.5em;
+                    }
+                    
+                }
+                .shop_cont_two-x {
+                    margin-top: 0.05rem;
+                    line-height: 23px;
+                    display: flex;
+                    .prduce_money-x {
+                        display: block;
+                        width: 0.5rem;
+                        text-align: left;
+                        line-height: 23px;
+                        color: #b81c22;
+                    }
+                    .produce_reduce-x{
+                        width:0.23rem;
+
+                        height:0.23rem;
+                        
+                        background: url(../../assets/images/reduce.png) no-repeat;
+                        
+                            background-size: auto auto;
+                        
+                        display: inline-block;
+                        
+                        background-size:0.23rem 0.23rem;
+                        
+                        margin-right: 0.08rem;
+                    }
+                    .produce_num-x{
+                        width:0.25rem;
+
+                        height:21.5pxm;
+                        
+                        display: inline-block;
+                        
+                        vertical-align: top;
+                        
+                        border:1px solid #cdcdcd;
+                        
+                        border-radius: 3px;
+                        
+                        -moz-border-radius: 3px;
+                        
+                        -webkit-border-radius: 3px;
+                        
+                        margin-right: 0.08rem;
+                        #num-x{
+                            width: 100%;
+                            height: 90%;
+                            border: none;
+                            line-height:21.5px;
+                            vertical-align: middle;
+                            text-align: center;
+                            display: inline-block;
+                            border-radius: 3px;
+                            
+                        
+                        }
+                    }
+                    .produce_add-x{
+                        width:0.23rem;
+
+                        height: 0.23rem;
+                        
+                        background: url(../../assets/images/n-plus.png) no-repeat;
+                        
+                            background-size: auto auto;
+                        
+                        background-size:0.23rem 0.23rem;
+                        
+                        display: inline-block;
+                    }
+                }
+                
+            }
+        }
+    }
