@@ -6,15 +6,21 @@ import App from './App'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
-//import  from ""                                                                                                                                                                                                                                                                                                                                                                                          
+import store from "./vuex/store";                                                                                                                                                                                                                                                                                                                                                               
 import "@/style/usage/app.scss"
 import router from './router'
+
+////验证器
+//import Validator from 'vue-validator'
+//Vue.use(Validator)
+
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   template: '<App/>',
   components: {App}

@@ -1,71 +1,109 @@
 <template>
 	<div class="app-good-car">
 		
-			
-		<!--头部-->
-		<div class="topTitle">
-			<span class="topBack">
-				<i class="yo-ico">&#xe603;</i>
-			</span>
-			<span class="TitleName">购物车</span>
-		</div>
+		<AppComHeader/>
 		
-			
-			
+		
 		<!--购物车列表-->
-		<div class="goodcar_list-x">
+		
+		<div class="goodcar_list-x" v-if="!car.length">
+			<!--购物车没有商品-->
+			<div class="shoppingCar_null-x">
+				<div class="shoppingCar_null_pic-x">
+					<p class="car-img-x">
+						<img src="../../assets/images/null-car.png" alt="car-img" />
+					</p>
+				</div>
+				<p class="car_btn-x">
+					<span class="sc_btn-x shadow">
+						<a href="#">我的收藏</a>
+					</span>
+					<span class="gm_btn-x shadow">
+						<a href="#">去逛逛</a>
+					</span>
+				</p>
+			</div>
+			<div class="login-x">
+				<div class="user_info-x">
+					<a href="#" style="vertical-align: middle;">
+						<span>AAA*****</span>
+					</a>
+					<i>|</i>
+					<a href="#">退出</a>
+				</div>
+			</div>
 			
-		<AppGoodCarItem/>
-		<AppGoodCarItem/>
-		<AppGoodCarItem/>
 			
+			<div class="main-footerp">
+							<ul>
+                               <li>
+								   <a href="">
+									   <img src="http://i10.m.vancl.com/Content/H5/img/help1.png" alt="">
+								   </a>
+							   </li>
+								<li>
+								  <a href="">
+									   <img src="http://i10.m.vancl.com/Content/H5/img/download1.png" alt="">
+								  </a>
+							   </li>
+								 <li>
+								  <a href="">
+									   <img src="http://i10.m.vancl.com/Content/H5/img/weixin1.png" alt="">
+								  </a>
+							   </li>
+							   <li>
+								 <a href="">
+									   <img src="http://i10.m.vancl.com/Content/H5/img/pcsite1.png" alt="">
+								 </a>
+							   </li>
+							</ul>
+						     <div class="copyright">
+							     <h3>  京ICP证100557号</h3>
+					        </div>
+						</div>
+		
+		<AppNav/>
 			
 		</div>
 		
 			
 			
-		<!--底部-->
-		<div class="footer-x">
-			<form action="" class="settle-x,clear">
-				<div class="pay-money-x">
-					<!--需要支付-->
-					<p class="l_price-x">
-						需支付
-						<span id="lt_price">
-							￥158.00
-						</span>
-					</p>
-					
-					<p></p>
-					<!--总金额及优惠-->
-					<p class="l_settle-x">
-						<span>总金额</span>
-						<span id="allprice-x">￥158.00</span>
-						<span>已优惠</span>
-						<span id="on_sale-x">0.00</span>
-					</p>
-				</div>
-				
-				<!--结算-->
-				<div class="all_settle-x">
-					<input type="submit" name="set-btn-x" id="set-btn-x" value="结算（1）" />
-				</div>
-			</form>
+		<div class="sale-x" v-else>
+				<span>在售商品 :</span>
+				<input type="text" name="rm-x" class="rm-x" value="删除" />
+				<input type="text" name="no_check-x" class="no_check-x" value="全不选" />
+		
+			
+		<AppGoodCarItem v-for="item in car" :key="item.id" :info='item'/>	
+		
+		<AppGoodCarFooter/>
 		</div>
-		
-		
 	</div>
 </template>
 
 <script>
+	//使用购物车数据
+	import {mapState} from 'vuex'
+	import AppComHeader from "../header/AppComHeader"
+	import AppGoodCarFooter from "./AppGoodCarFooter"
 	import AppGoodCarItem from "./AppGoodCarItem"
+	import AppNav from "../index/AppNav"
 	export default{
 		name:"app-good-car",
 		components:{
-			AppGoodCarItem
+			AppGoodCarItem,
+			AppGoodCarFooter,
+			AppNav,
+			AppComHeader
+		},
+		computed:{
+			...mapState([
+				'car'
+			])
 		}
 	}
 </script>
 
-<style>
+<style scoped="" lang="scss">
+	
 </style>
