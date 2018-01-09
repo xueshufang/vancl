@@ -27,7 +27,7 @@
 					<div class="input_2">
 						<input type="password" name="password" id="password" placeholder="请输入密码" />	
 					</div>	
-					<a href="javascript:;">登&nbsp录</a>
+					<a href="javascript:;" >登&nbsp;录</a>
 				</div>
 			</form>
 		
@@ -95,7 +95,10 @@ export default {
 	name: "app-login",
 	data() {
 		return {
-			type: 'login'
+			type: 'login',
+			user_info:{
+				username:'',password:''
+			}
 		}
 	},
 	watch: {
@@ -105,9 +108,19 @@ export default {
 	},
 	components: {
 		AppComHeader
+	},
+	methods:{
+		toRegister(name){
+			this.$router.push({name})
+		},
+		login(params){
+			var users_info=JSON.parse(localStorage.user_info)
+			
+		}
 	}
 
-}</script>
+}
+</script>
 
 <style lang="scss" scoped="">
 	
