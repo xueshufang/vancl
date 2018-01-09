@@ -2,7 +2,7 @@
 	
       <div class="app-main">
 		   <router-view></router-view>
-		    <AppHeader></AppHeader>
+		      <AppHeader></AppHeader>  
 			<div class="main_inner ">
 				<AppBanner></AppBanner>
 				<!--活动-->
@@ -126,10 +126,10 @@
 						</div>
 						<!--  查看更多，返回顶部-->
 						<div class="allAndtop">
-							<a href="" class="see-all">
+							<a href="javascript:;" class="see-all" >
 								<img src="http://i10.m.vancl.com/content/html5v3/images/see-all.jpg" alt="">
 							</a>
-							<a href="" class="ret-top">
+							<a href="javascript:;" class="ret-top see-all" v-back-top>
 								<img src="http://i10.m.vancl.com/content/html5v3/images/ret-top.jpg" alt="">
 							</a>
 						</div>
@@ -197,7 +197,7 @@
 			
 		 },
 		  mounted(){
-			  
+			 
 			  fetch('http://localhost:8080/api/list')
 				  .then((response)=>response.json())
 				  .then((res)=>{
@@ -205,8 +205,7 @@
 					  this.list = res
 					 console.log(this.list)
 				  })
-					  
-				  
+			
 			  
 		  }
     }

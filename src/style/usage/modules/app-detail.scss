@@ -1,0 +1,33 @@
+.other-content-p{
+    position:relative;top:0;margin-bottom: 0.51rem;width:100%;flex:1;background-color:#fff;
+    .slider-p{
+        width:100%;height:3.09rem;
+        a{
+            display: block;padding:0.06rem 0.384rem 0 0.384rem;
+            img{
+                width:100%;height:100%;display: block;
+            }
+        }
+    }
+}
+.prd-tit-p{
+    padding:0.06rem 0.24rem;width:100%;height:1.17rem;
+    .name-p{
+        color:#4c4c4c;font-size: 12px;margin-right:0.2025rem;
+    }
+    .price-p{
+        color:#c8161e;font-size: 12px;margin-right:0.0135rem;
+    }
+    .pricep-p{
+        color:#c8161e;font-size: 17px;display: block;
+    }
+    .reprice-p{
+        display: block;width:100%;height:0.26rem;color:#c8161e;
+        span{
+            color:#c8161e;font-size: 13px;margin-right:0.2025rem;
+        }
+    }
+     .discount-p{
+            color:#c8161e;font-size: 13px;
+        }
+}
