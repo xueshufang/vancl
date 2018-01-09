@@ -10,18 +10,16 @@ import store from "./vuex/store";
 import "@/style/usage/app.scss"
 import  './modules/directives'
 import router from './router'
-<<<<<<< HEAD
 // 懒加载
 import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
-=======
+
 
 ////验证器
 //import Validator from 'vue-validator'
 //Vue.use(Validator)
 
 
->>>>>>> master
 Vue.config.productionTip = false
 
 Vue.component(Swipe.name, Swipe);

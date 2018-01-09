@@ -22,11 +22,8 @@
 		components: {
 			AppLogin,
 			AppRegister,
-<<<<<<< HEAD
 			AppHeaderTop
-=======
-			AppComHeader
->>>>>>> master
+
 		},
 		mounted() {
 			let that = this
