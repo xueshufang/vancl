@@ -14,11 +14,10 @@ const routes=[
 	{path:'/login',name:'login',component:AppLogin},
 	{path:'/register',name:'register',component:AppRegister},
 	{path:'/goodcar',name:'goodcar',component:AppGoodCar},
-<<<<<<< HEAD
+
 	{path:'/goodlist',name:'goodlist',component:AppGoodList},
 	{path:'/gooddetail',name:'gooddetail',component:AppDetail},
-=======
->>>>>>> master
+
 	{path:'**',redirect:'/main'}
 ]
 const router = new Router({
