@@ -131,7 +131,7 @@
                 this.$router.go(-1)
             },
             changeState(){
-                // alert(1)
+                alert(1)
               
                 this.colorShow = !this.colorShow
                 
