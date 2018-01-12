@@ -1,7 +1,7 @@
 <template>
     <div class="app-good-list">
          <div class="topTitle-p">
-             <span class="topBack-p"></span>
+             <span class="topBack-p"  @click='prevclick'></span>
              <span class="curTitle-p">开年大促</span>
          </div>
          <div class="good-banner-p">
@@ -13,10 +13,10 @@
              </a>
          </div>
          <div class="topic-good-p clearfix">
-             <div class="topic-p" v-for="goodlisttop in goodlisttops" :key="goodlisttop.id">
-                  <a >
+             <div @click="clickDetail(goodlisttop.id)" class="topic-p" v-for="goodlisttop in goodlisttops" :key="goodlisttop.id" >
+                  <router-link  :to="{name:'gooddetail'}">
                       <img :src="goodlisttop.img" alt="">
-                  </a>
+                  </router-link>
              </div>
         </div> 
          <div class="goodlistmain-p clearfix">
@@ -43,7 +43,8 @@
 
 <script>
     import AppNav from '../Index/AppNav.vue'
-    
+   
+    import {mapActions} from 'vuex'
     export default {
 		 name:'app-good-list',
 		  data(){
@@ -56,6 +57,7 @@
 			AppNav
 		 },
          methods:{
+             ...mapActions(['clickDetail']),
 			getGoodsp(){
                 let that= this
                 let url = '/api/goodlistmain/'
@@ -66,7 +68,11 @@
                    this.dataps = res
                    
                 })
-            }
+            },
+            prevclick(){
+                this.$router.go(-1)
+            },
+            
 		 },
 		  mounted(){
               var that = this;
@@ -74,11 +80,13 @@
              .then((response)=>response.json())
              .then((res)=>{
                  this.goodlisttops = res;
-                
+                this.$store.state.goods = res;
+               
              })
 			this.getGoodsp()  
 			  
-		  }
+          }
+         
     }
 </script>
 

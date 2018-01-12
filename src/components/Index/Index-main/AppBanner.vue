@@ -6,7 +6,7 @@
                     </div> -->
                     <mt-swipe :auto="4000">
                         <mt-swipe-item v-for="billboard in billboards" :key="billboard.id"class="banner-img">
-                             <img :src="billboard.imageUrl" alt="">
+                             <router-link tag="img" :src="billboard.imageUrl" alt="" :to="{name:'goodlist'}"></router-link>
                         </mt-swipe-item>
                    
                     </mt-swipe>
