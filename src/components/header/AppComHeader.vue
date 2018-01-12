@@ -1,7 +1,7 @@
 <template>
 	<div class="app-com-header">
 		<div class="topTitle">
-			<span class="topBack">
+			<span class="topBack"  @click='prevclick'>
 				<i class="yo-ico">&#xe603;</i>
 			</span>
 			<span class="TitleName">登录</span>
@@ -12,7 +12,12 @@
 <script>
 	import AppComHeader from './AppComHeader'
 	export default{
-		name:"app-com-header",
+        name:"app-com-header",
+        methods:{
+             prevclick(){
+                this.$router.go(-1)
+            }
+        },
 		components:{
 			AppComHeader
 		}

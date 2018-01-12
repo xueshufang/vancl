@@ -83,11 +83,12 @@
 
 <script>
 	//使用购物车数据
-	import {mapState} from 'vuex'
+	import {mapState,mapActions} from 'vuex'
 	import AppComHeader from "../header/AppComHeader"
 	import AppGoodCarFooter from "./AppGoodCarFooter"
 	import AppGoodCarItem from "./AppGoodCarItem"
 	import AppNav from "../index/AppNav"
+	
 	export default{
 		name:"app-good-car",
 		components:{
@@ -100,6 +101,13 @@
 			...mapState([
 				'car'
 			])
+		},
+		methods:{
+			...mapActions(['initCar'])
+		},
+		mounted(){
+			this.initCar()
+			console.log(this)
 		}
 	}
 </script>
