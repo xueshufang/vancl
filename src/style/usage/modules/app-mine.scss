@@ -1,0 +1,181 @@
+body {
+    font-size: 0.112rem;
+}
+
+.app-main {
+    //头部
+    .topTitle {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 0.45rem;
+        background: #b81c22;
+        text-align: center;
+        line-height: 0.45rem;
+        color: #fff;
+    }
+    .topBack {
+        position: absolute;
+        left: 0.11rem;
+        top: -0.02rem;
+        font-size: 0.29rem;
+    }
+    .TitleName {
+        font-size: 0.17rem;
+    }
+    //内容
+    .others-content {
+        position: relative;
+        top: 0rem;
+        margin-bottom: 0.48rem;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        line-height: 1.5;
+        .uc-wrap {
+            background-color: #f0eff5;
+            .uc-profile {
+                height: 2rem;
+                background: url(http://i10.m.vancl.com/Content/H5/img/uc-topbgd.png) no-repeat center top;
+                background-size: 100% 200px;
+                text-align: center;
+                color: #fff;
+                line-height: 1.8;
+                .uc-avatar {
+                    margin-top: 0.32rem;
+                    width: 0.73rem;
+                    height: 0.73rem;
+                    border-radius: 50%;
+                }
+                .uc-level {
+                    display: block;
+                    margin: 0.045rem auto;
+                    width: 0.56rem;
+                    height: 0.17rem;
+                    background: url(http://i10.m.vancl.com/Content/H5/img/H5-NewV0.png) no-repeat center;
+                    background-size: cover;
+                }
+                .uc-prof-li li {
+                    display: inline-block;
+                    width: 32%;
+                }
+            }
+            .uc-order {
+                margin: 0.112rem 0;
+                text-align: center;
+                background-color: #fff;
+                .uc-order-title {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 38px;
+                    padding: 0 0.1rem;
+                    color: #000;
+                    text-align: left;
+                    line-height: 38px;
+                    border-bottom: 1px solid #f0eff5;
+                }
+                .uc-order-li {
+                    float: left;
+                    width: 25%;
+                    background: #fff;
+                    >a {
+                        display: inline-block;
+                        padding: 0.112rem 0;
+                        width: 100%;
+                        color: #000;
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        .fa {
+                            margin-bottom: 4px;
+                            font-size: 20px;
+                            color: #a5a5a5;
+                        }
+                    }
+                }
+            }
+            .uc-section {
+                text-align: center;
+                background-color: #fff;
+                margin-top: 74px;
+                ul {
+                    margin-left: -1px;
+                    border-top: 1px solid #f0eff5;
+                }
+                .uc-section-li {
+                    
+                     :nth-of-type(4n):after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        border-top: 1px solid #f0eff5;
+                    }
+                    width: 25%;
+                    float: left;
+                    a {
+                        display: inline-block;
+                        margin: 0.17rem 0;
+                        width: 100%;
+                        border-left: 1px solid #f0eff5;
+                        color: #000;
+                    }
+                    span {
+                        display: block;
+                    }
+                    span:first-of-type {
+                        margin: 0 auto;
+                        width: 0.33rem;
+                        height: 0.33rem;
+                        background: url(http://i10.m.vancl.com/Content/H5/img/uc-section-icon.png) no-repeat;
+                        background-size: 0.337rem 4.725rem;
+                    }
+                }
+                .uc-section-pTailor span:nth-child(1) {
+                    background-position: 0rem -0.337rem;
+                }
+                .uc-section-coupon span:first-of-type {
+                    background-position: 0rem -0.675rem;
+                }
+                .uc-section-gCard span:first-of-type {
+                    background-position: 0rem -1.012rem;
+                }
+                .uc-section-addr span:first-of-type {
+                    background-position: 0rem -1.35rem;
+                }
+                .uc-section-comment span:first-of-type {
+                    background-position: 0rem -1.687rem;
+                }
+                .uc-section-ask span:first-of-type {
+                    background-position: 0rem -2.025rem;
+                }
+                .uc-section-points span:first-of-type {
+                    background-position: 0rem -2.362rem;
+                }
+                .uc-section-advise span:first-of-type {
+                    background-position: 0rem -2.7rem;
+                }
+                .uc-section-logistics span:first-of-type {
+                    background-position: 0rem -4.05rem;
+                }
+                .uc-section-rRecords span:first-of-type {
+                    background-position: 0rem -4.387rem;
+                }
+                .uc-section-rRecords span:first-of-type {
+                    background-position: 0rem -4.387rem;
+                }
+                .uc-section-charge {
+                    position: relative;
+                    .chargeNotice {
+                        position: absolute;
+                        width: 100%;
+                        font-size: 0.11rem;
+                        color: #b81c22;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

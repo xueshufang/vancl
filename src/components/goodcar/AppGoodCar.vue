@@ -1,7 +1,12 @@
 <template>
 	<div class="app-good-car">
 		
-		<AppComHeader/>
+		<div class="topTitle">
+			<span class="topBack">
+				<i class="yo-ico">&#xe603;</i>
+			</span>
+			<span class="TitleName">购物车</span>
+		</div>
 		
 		
 		<!--购物车列表-->
@@ -19,7 +24,7 @@
 						<a href="#">我的收藏</a>
 					</span>
 					<span class="gm_btn-x shadow">
-						<a href="#">去逛逛</a>
+						<router-link :to="{name:'main'}">去逛逛</router-link>
 					</span>
 				</p>
 			</div>
@@ -84,7 +89,6 @@
 <script>
 	//使用购物车数据
 	import {mapState} from 'vuex'
-	import AppComHeader from "../header/AppComHeader"
 	import AppGoodCarFooter from "./AppGoodCarFooter"
 	import AppGoodCarItem from "./AppGoodCarItem"
 	import AppNav from "../index/AppNav"
@@ -93,8 +97,7 @@
 		components:{
 			AppGoodCarItem,
 			AppGoodCarFooter,
-			AppNav,
-			AppComHeader
+			AppNav	
 		},
 		computed:{
 			...mapState([

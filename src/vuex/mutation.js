@@ -18,7 +18,14 @@ const mutations={
 		if(!isHas){   //商品不存在
 			state.car.push({id,title,price,num:1})  //新的num为1
 		}
-	}
+	},
+	changeTitle(state,title){
+    	state.global_title = title
+    },
+    changeUserInfo(state,user_info){
+    	state.user_info = user_info
+    	localStorage.user_info = JSON.stringify(user_info)
+    }
 }
 
 export default mutations
