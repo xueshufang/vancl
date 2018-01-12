@@ -107,7 +107,7 @@
 		},
 		mounted(){
 			this.initCar()
-			console.log(this)
+			
 		}
 	}
 </script>
