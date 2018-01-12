@@ -106,7 +106,7 @@
                 <i class="goods-num">0</i>
             </a>
             <a href="#">
-                <span tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</span>
+                <span class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</span>
             </a>
         </div>
     </div>
@@ -132,7 +132,7 @@
             },
             changeState(){
                 // alert(1)
-                console.log(this)
+              
                 this.colorShow = !this.colorShow
                 
             },
