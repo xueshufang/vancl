@@ -10,6 +10,9 @@ import store from "./vuex/store";
 import "@/style/usage/app.scss"
 import  './modules/directives'
 import router from './router'
+
+
+
 // 懒加载
 import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
@@ -18,7 +21,6 @@ Vue.use(Lazyload);
 ////验证器
 //import Validator from 'vue-validator'
 //Vue.use(Validator)
-
 
 Vue.config.productionTip = false
 

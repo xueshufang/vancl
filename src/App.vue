@@ -21,7 +21,10 @@
 		components: {
 			AppLogin,
 			AppRegister,
-			AppHeaderTop
+			AppHeaderTop,
+
+			AppHeaderTop,
+			AppComHeader
 
 		},
 		mounted() {

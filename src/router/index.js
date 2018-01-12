@@ -18,6 +18,12 @@ const routes=[
 	{path:'/goodlist',name:'goodlist',component:AppGoodList},
 	{path:'/gooddetail',name:'gooddetail',component:AppDetail},
 	{path:'/mine',name:'mine',component:AppMine},
+
+	{path:'/goodlist',name:'goodlist',component:AppGoodList},
+	{path:'/gooddetail',name:'gooddetail',component:AppDetail},
+
+
+
 	{path:'**',redirect:'/main'}
 ]
 const router = new Router({

@@ -9,7 +9,7 @@
 					<p class="l_price-x">
 						需支付
 						<span id="lt_price">
-							￥158.00
+							￥{{money}}.00
 						</span>
 					</p>
 					
@@ -25,7 +25,7 @@
 				
 				<!--结算-->
 				<div class="all_settle-x">
-					<input type="submit" name="set-btn-x" id="set-btn-x" value="结算（1）" />
+					<button type="submit" name="set-btn-x" id="set-btn-x"v-model="isAllSelected" >结算({{num}})</button>
 				</div>
 			</form>
 		</div>
@@ -35,15 +35,38 @@
 </template>
 
 <script>
-	import {mapGetters} from "vuex"
+	import {mapGetters,mapActions} from "vuex"
 	import AppGoodCarFooter from "./AppGoodCarFooter"
 	export default{
 		name:"app-good-car-footer",
+		data(){
+            return {
+				num:this.$store.state.car.num
+			}
+		},
 		components:{
 			AppGoodCarFooter
 		},
 		computed:{
-			...mapGetters(['money'])
+			...mapGetters(['money']),
+            isAllSelected:{
+               get(){
+                   return this.$store.state.car.every(item=>{
+					   if(item.isSelected){
+						   return true
+					   }else{
+						   return false
+					   }
+				   })
+			   },
+			   set(newVal){
+				   this.seleteGood(newVal)
+			   }
+			}
+
+		},
+		methods:{
+			...mapActions(['seleteGood'])
 		}
 	}
 </script>

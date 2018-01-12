@@ -1,19 +1,11 @@
 
 import Vue from 'vue'
 
-// Vue.directive('scroll-show',{
-//     bind(el,binding){
-//          console.log(binding)
-//         window.addEventListener("scroll",function(e){
-         
-//             if(this.scrollY >46.8){
-              
-//             }else{
-//                 binding.value.value = false
-//             }
-//         })
-//     }
-// })
+Vue.directive('color-show',{
+    bind(el,binding){
+      console.log(binding)
+    }
+})
 
 Vue.directive('back-top',{
     inserted(el,binding){
