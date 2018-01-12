@@ -106,7 +106,7 @@
                 <i class="goods-num">0</i>
             </a>
             <a href="#">
-                <span class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</span>
+                <router-link tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</router-link>
             </a>
         </div>
     </div>
