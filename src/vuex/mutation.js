@@ -24,7 +24,15 @@ const mutations={
 			state.car.push({id,title,price,num:1,img,isSelected:true})  //新的num为1
 			console.log(state.car)
 		}
-		localStorage.car = JSON.stringify(state.car)
+
+	},
+	changeTitle(state,title){
+    	state.global_title = title
+    },
+    changeUserInfo(state,user_info){
+    	state.user_info = user_info
+    	localStorage.user_info = JSON.stringify(user_info)
+		
 	},
 	clickDetail(state,id){
        state.goods.some(item=>{
@@ -71,6 +79,7 @@ const mutations={
 	}
 
   
+
 }
 
 export default mutations

@@ -8,15 +8,21 @@ import AppMain  from '../components/Index/AppMain'
 import AppGoodCar from "../components/goodcar/AppGoodCar"
 import AppGoodList from '../components/good/AppGoodList'
 import AppDetail from '../components/good/AppDetail'
+import AppMine from '../components/mine/AppMine'
 const routes=[
 	{path:'',redirect:'/main'},
 	{path:'/main',name:'main',component:AppMain},
 	{path:'/login',name:'login',component:AppLogin},
 	{path:'/register',name:'register',component:AppRegister},
 	{path:'/goodcar',name:'goodcar',component:AppGoodCar},
+	{path:'/goodlist',name:'goodlist',component:AppGoodList},
+	{path:'/gooddetail',name:'gooddetail',component:AppDetail},
+	{path:'/mine',name:'mine',component:AppMine},
 
 	{path:'/goodlist',name:'goodlist',component:AppGoodList},
 	{path:'/gooddetail',name:'gooddetail',component:AppDetail},
+
+
 
 	{path:'**',redirect:'/main'}
 ]
