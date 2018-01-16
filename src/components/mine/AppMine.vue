@@ -2,7 +2,7 @@
 	<div class="app-main">
 
 		<div class="topTitle">
-			<span class="topBack">
+			<span class="topBack" @click='prevclick'>
 				<i class="yo-ico">&#xe603;</i>
 			</span>
 			<span class="TitleName">个人中心</span>
@@ -149,6 +149,11 @@
 		name: 'app-main',
 		components:{
 			AppNav
+		},
+		methods:{
+			 prevclick(){
+                this.$router.go(-1)
+            }
 		}
 	}
 </script>

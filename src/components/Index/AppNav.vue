@@ -18,7 +18,7 @@
                   <span>购物车</span>
               </a>
             <a href="javascript:;">
-                  <i class="yo-ico">&#xe60d;</i>
+                  <i class="yo-ico" @click = "clickLogin">&#xe60d;</i>
                   <span>我的</span>
               </a>
           </div>
@@ -29,6 +29,11 @@
 
 export default{
     name:'app-nav',
+    data(){
+       return{
+       	
+       }	
+    },
     methods:{
         clickFn(){
             this.$router.go('/main')
@@ -36,6 +41,11 @@ export default{
         clickCar(){
             console.log(this.$router)
             this.$router.push({path:'/goodcar'})
+        },
+        clickLogin(){
+            var users=JSON.parse(localStorage.user_info?localStorage.user_info:"[]")
+           
+             users.user_id?this.$router.push('/mine'):this.$router.push('/login')
         }
 
     }

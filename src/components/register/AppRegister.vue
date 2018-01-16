@@ -2,7 +2,7 @@
 	<div class="app-register">
 		<!--头部-->
 		<div class="topTitle">
-			<span class="topBack">
+			<span class="topBack" @click='prevclick'>
 				<i class="yo-ico">&#xe603;</i>
 			</span>
 			<span class="TitleName">注册</span>
@@ -56,15 +56,15 @@
 		name: "app-register",
 		data() {
 			return {
+				value:{
+					name:'abc'
+				},
 				useList: {
 					yanzheng:'',phone:'',userpass:'',password:''
 				}
 			}
 		},
 		methods: {
-			value(){
-				name="abc"
-			},
 			register(params){
 			if(this.useList.yanzheng != '' && this.useList.phone !='' &&this.useList.userpass != '' &&this.useList.password != ''){
 					this.$store.commit('changeUserInfo',params)    
@@ -76,7 +76,10 @@
 				}
 				
 				
-			}
+			},
+			 prevclick(){
+                this.$router.go(-1)
+            }
 		}
 	}
 </script>

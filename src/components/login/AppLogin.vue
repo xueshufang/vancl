@@ -1,7 +1,7 @@
 <template>
 	<div class="app-login">
 		<div class="topTitle">
-			<span class="topBack">
+			<span class="topBack"  @click='prevclick'>
 				<i class="yo-ico">&#xe603;</i>
 			</span>
 			<span class="TitleName">登录</span>
@@ -38,7 +38,7 @@
 		
 		
 			<!--快速登录-->
-			<from action="user" v-else>
+			<form action="user" v-else>
 				<div class="input_content2" >
 					
 					<!--图片验证码-->
@@ -63,7 +63,7 @@
 					</div>
 					<a href="javascript:;">登&nbsp;录</a>
 				</div>
-			</from>
+			</form>
 			
 			<div class="server">
 				<router-link :to="{name:'register'}">免费注册 
@@ -115,6 +115,9 @@ export default {
 		toRegister(name){
 			this.$router.push({name})
 		},
+	  	prevclick(){
+            this.$router.go(-1)
+        },
 		login1(params){
 			let that =this
 			setTimeout(()=>{
@@ -128,7 +131,7 @@ export default {
 					user_id:123456,username:that.username
 				}
 				that.$store.commit('changeUserInfo',data) 
-				that.$router.replace({name:'main'})
+				that.$router.replace({name:'mine'})
 			},500)
 				
 			}

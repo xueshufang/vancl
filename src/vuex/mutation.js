@@ -26,9 +26,6 @@ const mutations={
 		}
 
 	},
-	changeTitle(state,title){
-    	state.global_title = title
-    },
     changeUserInfo(state,user_info){
     	state.user_info = user_info
     	localStorage.user_info = JSON.stringify(user_info)
