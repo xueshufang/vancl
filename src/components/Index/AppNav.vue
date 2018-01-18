@@ -26,7 +26,6 @@
 </template>
 
 <script>
-
 export default{
     name:'app-nav',
     data(){
@@ -52,7 +51,7 @@ export default{
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 
 </style>
