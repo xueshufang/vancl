@@ -24,7 +24,7 @@ const mutations={
 			state.car.push({id,title,price,num:1,img,isSelected:true})  //新的num为1
 			console.log(state.car)
 		}
-
+      localStorage.car = JSON.stringify(state.car)
 	},
 	changeTitle(state,title){
     	state.global_title = title
@@ -38,6 +38,8 @@ const mutations={
        state.goods.some(item=>{
 			if(item.id == id){
 				localStorage.good = JSON.stringify(item)
+				state.good = item
+				console.log('musta',state.good)
 				return true
 			}else{
 				return false;

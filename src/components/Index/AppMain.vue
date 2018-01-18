@@ -201,9 +201,8 @@
 			  fetch('http://localhost:8080/api/list')
 				  .then((response)=>response.json())
 				  .then((res)=>{
-					  console.log(res)
 					  this.list = res
-					 console.log(this.list)
+					
 				  })
 			
 			  

@@ -2,7 +2,7 @@
 	<div class="app-good-car">
 		
 		<div class="topTitle">
-			<span class="topBack">
+			<span class="topBack" @click='prevclick'>
 				<i class="yo-ico">&#xe603;</i>
 			</span>
 			<span class="TitleName">购物车</span>
@@ -107,7 +107,11 @@
 			])
 		},
 		methods:{
-			...mapActions(['initCar'])
+			...mapActions(['initCar']),
+			 prevclick(){
+
+                this.$router.go(-1)
+            },
 		},
 		mounted(){
 			this.initCar()

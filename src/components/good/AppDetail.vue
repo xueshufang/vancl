@@ -106,7 +106,7 @@
                 <i class="goods-num">0</i>
             </a>
             <a href="#">
-                <router-link tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</router-link>
+                <span class="addToCart" @click="addGG({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" >加入购物车</span>
             </a>
         </div>
     </div>
@@ -121,9 +121,15 @@
            return{
                colorShow:false,
                isShow:true,
-               goodDe: JSON.parse(localStorage.good),
+               goodDe: this.good?this.good:{},
               
            }
+        },
+        created () {
+            console.log('sdgsdg', this.goodDe)
+            console.log('456',this.good)
+            this.goodDe = this.good
+            console.log('123', this.goodDe)
         },
         methods:{
             prevclick(){
@@ -136,7 +142,11 @@
                 this.colorShow = !this.colorShow
                 
             },
-            ...mapActions(['addGood'])
+            ...mapActions(['addGood']),
+            addGG (obj) {
+                this.addGood(obj)
+                this.$router.push('/goodcar')
+            }
            
         },
         computed:{
