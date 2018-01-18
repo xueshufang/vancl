@@ -106,7 +106,7 @@
                 <i class="goods-num">0</i>
             </a>
             <a href="#">
-                <router-link tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})" :to="{name:'goodcar'}">加入购物车</router-link>
+                <router-link tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})">加入购物车</router-link>
             </a>
         </div>
     </div>
@@ -129,6 +129,9 @@
             prevclick(){
 
                 this.$router.go(-1)
+            },
+            goodDetial(params){
+               
             },
             changeState(){
                 alert(1)
