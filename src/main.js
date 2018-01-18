@@ -6,6 +6,8 @@ import App from './App'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
+
+
 import store from "./vuex/store";                                                                                                                                                                                                                                                                                                                                                               
 import "@/style/usage/app.scss"
 import  './modules/directives'
