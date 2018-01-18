@@ -25,7 +25,7 @@
 				
 				<!--结算-->
 				<div class="all_settle-x">
-					<button type="submit" name="set-btn-x" id="set-btn-x"v-model="isAllSelected" >结算({{num}})</button>
+					<button type="submit" name="set-btn-x" id="set-btn-x" v-model="isAllSelected">结算({{getNum}})</button>
 				</div>
 			</form>
 		</div>
@@ -41,14 +41,14 @@
 		name:"app-good-car-footer",
 		data(){
             return {
-				num:this.$store.state.car.num
+				// num:this.$store.state.car.num
 			}
 		},
 		components:{
 			AppGoodCarFooter
 		},
 		computed:{
-			...mapGetters(['money']),
+			...mapGetters(['money','getNum']),
             isAllSelected:{
                get(){
                    return this.$store.state.car.every(item=>{

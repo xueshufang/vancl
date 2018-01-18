@@ -13,8 +13,9 @@
              </a>
          </div>
          <div class="topic-good-p clearfix">
-             <div @click="clickDetail(goodlisttop.id)" class="topic-p" v-for="goodlisttop in goodlisttops" :key="goodlisttop.id" >
-                  <router-link  :to="{name:'gooddetail'}">
+             <div  class="topic-p" v-for="goodlisttop in goodlisttops" :key="goodlisttop.id" >
+                  <router-link  @click.native="clickDetail(goodlisttop.id)" :to="{name:'gooddetail'}">
+                      <!-- @click="" -->
                       <img :src="goodlisttop.img" alt="">
                   </router-link>
              </div>
@@ -57,7 +58,11 @@
 			AppNav
 		 },
          methods:{
-             ...mapActions(['clickDetail']),
+             clickDetail(id){
+                  this.$store.commit('clickDetail',id)
+
+             },
+            //  ...mapActions(['clickDetail']),
 			getGoodsp(){
                 let that= this
                 let url = '/api/goodlistmain/'

@@ -13,6 +13,17 @@ const getters ={
 		
 		})
 		return money
+	},
+	getNum(state){
+		let num = 0
+		state.car.forEach(item=>{
+			if(item.isSelected){
+					num+=item.num
+					
+			}
+		
+		})
+		return num
 	}
 }
 

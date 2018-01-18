@@ -103,10 +103,10 @@
         <div class="nav">
             <a href="#">
                 <span class="nav-shopcart"></span>
-                <i class="goods-num">0</i>
+                <i class="goods-num">{{getNum}}</i>
             </a>
             <a href="#">
-                <router-link tag="span" class="addToCart" @click="addGood({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})">加入购物车</router-link>
+                <span class="addToCart" @click="addGG({id:goodDe.id,price:goodDe.price,title:good.title,img:goodDe.img})">加入购物车</span>
             </a>
         </div>
     </div>
@@ -114,14 +114,14 @@
  
 <script>
 
-   import {mapState,mapActions} from 'vuex'
+   import {mapState,mapActions,mapGetters} from 'vuex'
    export default {
         name:'app-deatil',
         data(){
            return{
                colorShow:false,
                isShow:true,
-               goodDe: JSON.parse(localStorage.good),
+               goodDe:localStorage.good?JSON.parse(localStorage.good):[],
               
            }
         },
@@ -130,20 +130,21 @@
 
                 this.$router.go(-1)
             },
-            goodDetial(params){
-               
+             addGG (obj) {
+                this.addGood(obj)
+                this.$router.push('/goodcar')
             },
             changeState(){
-                alert(1)
-              
                 this.colorShow = !this.colorShow
-                
             },
             ...mapActions(['addGood'])
-           
         },
         computed:{
-           ...mapState(['good'])
+           ...mapState(['good']),
+           	...mapGetters(['getNum']),
+        //    getDetail(){
+        //        this.goodDe =  JSON.parse(localStorage.good)
+        //    }
         }
        
   }
