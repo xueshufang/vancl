@@ -31,9 +31,9 @@
 				<div class="uc-order">
 					<ul class="clear">
 						<p>
-							<a class="uc-order-title" href="/order/GetOrderList">
+							 <a  class="uc-order-title" href="#">
 								全部订单
-								<b style="color: #a5a5a5;font-size: 15px;">></b>
+								<b style="color: #a5a5a5;font-size: 15px;" @click="showCar">></b>
 
 							</a>
 						</p>
@@ -153,7 +153,10 @@
 		methods:{
 			 prevclick(){
                 this.$router.go(-1)
-            }
+			},
+			showCar(){
+				this.$router.push('/goodcar')
+			}
 		}
 	}
 </script>

@@ -26,3 +26,19 @@
          }
      }
  }
+    .goods-num{
+            font-size: 0.1rem;
+            position: absolute;
+            top: 0;
+           left:0.4rem;
+           width:0.15rem;
+            height:0.15rem;
+            display: inline-block;
+            line-height: 0.15rem;
+            color: #fff;
+            border-radius:50%;
+            background: none;
+            background-color: #b81c22;
+            cursor: default;
+            text-align: center;
+    }

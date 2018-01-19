@@ -30,7 +30,7 @@
        },
         methods:{
           getBanner(){
-              axios.get('http://localhost:172.16.21.214/mz/v4/api/billboard/home?',{
+              axios.get('http://localhost:8080/mz/v4/api/billboard/home?',{
                   params:{__t:Date.now()}
               }).then((res)=>{
                 

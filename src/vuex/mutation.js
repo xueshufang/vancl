@@ -45,7 +45,7 @@ const mutations={
 	  let len = state.car.length;
 	  for(let i = 0;i <len;i++){
 		  if(state.car[i].id == id){
-			  alert(1)
+			 
 			  state.car[i].num--;
 				if(state.car[i].num==0){
 					state.car.splice(i,1)
@@ -55,10 +55,10 @@ const mutations={
 	},
 	removeGood(state,{id}){
 	   let len = state.car.length
-		  alert(3)
+		 
 	   for(let i = 0;i <len;i++){
 		   if(state.car[i].id == id){
-			   alert(4)
+			  
 			   state.car.splice(i,1)
 				  break;
 		   }

@@ -76,7 +76,7 @@
 		<div class="sale-x" v-else>
 				<span>在售商品 :</span>
 				<input type="text" name="rm-x" class="rm-x" value="删除" />
-				<input type="text" name="no_check-x" class="no_check-x" value="全不选" />
+				<input type="text" name="no_check-x" class="no_check-x" value="全不选">
 		
 			
 		<AppGoodCarItem v-for="item in car" :key="item.id" :info='item'/>	
@@ -110,10 +110,11 @@
 			...mapActions(['initCar']),
 			prevclick(){
 	            this.$router.go(-1)
-	        }
+			},
 		},
 		mounted(){
 			this.initCar()
+			
 			
 		}
 	}
